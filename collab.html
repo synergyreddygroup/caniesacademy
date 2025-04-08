@@ -27,28 +27,160 @@
 
     <style>
         .section {
-            margin-bottom: 40px;
+            margin-bottom: 60px;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
         }
 
         .section-title {
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f1f1f1;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin: 1.8rem 0 1rem 0;
+            color: #34495e;
+        }
+
+        h4 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.8rem 0;
+            color: #34495e;
+        }
+
+        p, li {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+
+        ul, ol {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 1rem;
+            margin: 1.5rem 0;
+            font-size: 1rem;
         }
 
-        th,
-        td {
+        th, td {
             border: 1px solid #dee2e6;
-            padding: 0.75rem;
+            padding: 0.9rem;
             text-align: left;
         }
 
         th {
             background-color: #f8f9fa;
+            font-weight: 600;
+        }
+
+        .contact-btn-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .whatsapp-btn, .call-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .call-btn {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .call-btn:hover {
+            background-color: #2980b9;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .whatsapp-btn i, .call-btn i {
+            margin-right: 8px;
+            font-size: 1.2rem;
+        }
+
+        .watermark {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3rem;
+            font-weight: bold;
+            color: rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 20px;
+                margin-bottom: 40px;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            h3 {
+                font-size: 1.3rem;
+            }
+            
+            .contact-btn-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .whatsapp-btn, .call-btn {
+                width: 100%;
+                padding: 0.7rem 1rem;
+            }
         }
     </style>
 
@@ -95,7 +227,7 @@
                     <div class="col-lg-12">
                         <div class="contact-form" data-aos-delay="300">
 
-                            <div class="section" style="background-color: inherit;">
+                            <div class="section">
                                 <h2>Canies Academy: Empowering Future Tech Leaders</h2>
                                 <h3>About Us</h3>
                                 <p>Canies Academy is a forward-thinking ed-tech institution specializing in hands-on, practical training programs in
@@ -112,7 +244,7 @@
                                         apply technology concepts directly.</li>
                                     <li><strong>Direct Mentorship:</strong> Guidance from industry professionals including direct sessions with our
                                         CEO and other experts.</li>
-                                    <li><strong>Exclusive Events:</strong> Participation in major events like Telangana’s biggest AI & Robotics Expo,
+                                    <li><strong>Exclusive Events:</strong> Participation in major events like Telangana's biggest AI & Robotics Expo,
                                         giving students exposure to the latest trends and networking opportunities.</li>
                                     <li><strong>Personalized Project Kits:</strong> Each participant receives a hands-on kit designed to support
                                         practical project development.</li>
@@ -157,14 +289,14 @@
                                 </ul>
                                 <h4>Brand Visibility:</h4>
                                 <ul>
-                                    <li>Joint branding efforts will enhance your school’s profile by associating it with innovative, high-impact
+                                    <li>Joint branding efforts will enhance your school's profile by associating it with innovative, high-impact
                                         learning experiences.</li>
                                 </ul>
                             
                                 <h3>Our Message at a Glance</h3>
                                 <h4>Our Purpose:</h4>
                                 <p>To bridge the gap between traditional education and the fast-paced world of technology by providing
-                                    transformative, practical training that prepares students for tomorrow’s jobs.</p>
+                                    transformative, practical training that prepares students for tomorrow's jobs.</p>
                                 <h4>What We Provide:</h4>
                                 <ul>
                                     <li>Industry-curated courses and hands-on training</li>
@@ -184,9 +316,10 @@
                                     <li>Increased school admissions and reputation</li>
                                     <li>New avenues for industry-academia collaboration and growth</li>
                                 </ul>
+                            
                             </div>
 
-                            <div class="section" style="background-color: inherit;">
+                            <div class="section">
                                 <h2>2. Course Curriculum Outline (3 Months)</h2>
                                 <p><strong>Target Audience:</strong> Class 8–12 students<br>
                                     <strong>Duration:</strong> 3 Months (12 Weeks)<br>
@@ -249,86 +382,97 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                                
+                                
                             </div>
 
-                            <div class="section" style="background-color: inherit;">
+                            <div class="section">
                                 <h2>✅ Testimonials</h2>
-                                <div>
-                                    🌟 "Learning Robotics and IoT through Canies Academy was my best experience. We got to build real projects, and it boosted my confidence in tech."
-                                    <br>— Sindhu Reddy, Student, RGUKT Basar
+                                <div class="mb-4">
+                                    <p class="mb-1">🌟 "Learning Robotics and IoT through Canies Academy was my best experience. We got to build real projects, and it boosted my confidence in tech."</p>
+                                    <p class="text-muted">— Sindhu Reddy, Student, RGUKT Basar</p>
                                 </div>
-                                <br>
-                                <div>
-                                    🌟 "The hands-on training and quiz made the students excited about learning. They were motivated like never before. We’re glad to collaborate with Canies Academy."
-                                    <br>— Mr. Suresh, Science Teacher, Government High School, Nirmal
+                                <div class="mb-4">
+                                    <p class="mb-1">🌟 "The hands-on training and quiz made the students excited about learning. They were motivated like never before. We're glad to collaborate with Canies Academy."</p>
+                                    <p class="text-muted">— Mr. Suresh, Science Teacher, Government High School, Nirmal</p>
                                 </div>
-                                <br>
-                                <div>
-                                    🌟 "I was surprised to see how students from a rural background quickly grasped AI concepts with Canies Academy’s practical method. A much-needed initiative."
-                                    <br>— Mrs. Kavitha, Headmistress, Govt School, Karimnagar
+                                <div class="mb-4">
+                                    <p class="mb-1">🌟 "I was surprised to see how students from a rural background quickly grasped AI concepts with Canies Academy's practical method. A much-needed initiative."</p>
+                                    <p class="text-muted">— Mrs. Kavitha, Headmistress, Govt School, Karimnagar</p>
                                 </div>
-                                <br>
-                                <div>
-                                    🌟 "I had never built a project before. Canies Academy made it easy, and now I want to become an AI engineer!"
-                                    <br>— Ajay Kumar, Class 10, Govt School, Karimnagar
+                                <div class="mb-4">
+                                    <p class="mb-1">🌟 "I had never built a project before. Canies Academy made it easy, and now I want to become an AI engineer!"</p>
+                                    <p class="text-muted">— Ajay Kumar, Class 10, Govt School, Karimnagar</p>
                                 </div>
-                                <br>
+                                
                                 <h2>📚 Case Studies</h2>
-                                <div>
-                                    📌 <strong>Case Study 1: RGUKT Basar – IoT, Networking & Robotics Workshop</strong><br>
-                                    Date: February 2025<br>
-                                    Participants: 30 PUC students<br>
-                                    <strong>Training Content:</strong><br>
-                                    IoT using Tinkercad<br>
-                                    Networking fundamentals<br>
-                                    Robotics concepts with ChatGPT integration<br>
-                                    Hands-on Project + Quiz<br>
-                                    <strong>Outcomes:</strong><br>
-                                    100% participation<br>
-                                    Over 90% students built a working model<br>
-                                    Top 5 students awarded in the final quiz<br>
-                                    Excellent feedback from students and administration<br>
-                                    Increased interest in tech-related career paths
+                                <div class="mb-4">
+                                    <h5>📌 <strong>Case Study 1: RGUKT Basar – IoT, Networking & Robotics Workshop</strong></h5>
+                                    <p class="mb-1"><strong>Date:</strong> February 2025</p>
+                                    <p class="mb-1"><strong>Participants:</strong> 30 PUC students</p>
+                                    <p class="mb-1"><strong>Training Content:</strong></p>
+                                    <ul class="mb-1">
+                                        <li>IoT using Tinkercad</li>
+                                        <li>Networking fundamentals</li>
+                                        <li>Robotics concepts with ChatGPT integration</li>
+                                        <li>Hands-on Project + Quiz</li>
+                                    </ul>
+                                    <p class="mb-1"><strong>Outcomes:</strong></p>
+                                    <ul>
+                                        <li>100% participation</li>
+                                        <li>Over 90% students built a working model</li>
+                                        <li>Top 5 students awarded in the final quiz</li>
+                                        <li>Excellent feedback from students and administration</li>
+                                        <li>Increased interest in tech-related career paths</li>
+                                    </ul>
                                 </div>
-                                <br>
-                                <div>
-                                    📌 <strong>Case Study 2: Govt School, Nirmal – Tech Mini Workshop</strong><br>
-                                    Objective: Introduce AI and Coding to rural school students<br>
-                                    Students: 50+ from Class 8-10<br>
-                                    <strong>Training:</strong><br>
-                                    Basics of AI & Automation<br>
-                                    Chatbot building session using visual tools<br>
-                                    <strong>Impact:</strong><br>
-                                    Students created simple AI responses<br>
-                                    Teachers observed increased curiosity and better engagement<br>
-                                    Many students expressed interest in attending further courses
+                                
+                                <div class="mb-4">
+                                    <h5>📌 <strong>Case Study 2: Govt School, Nirmal – Tech Mini Workshop</strong></h5>
+                                    <p class="mb-1"><strong>Objective:</strong> Introduce AI and Coding to rural school students</p>
+                                    <p class="mb-1"><strong>Students:</strong> 50+ from Class 8-10</p>
+                                    <p class="mb-1"><strong>Training:</strong></p>
+                                    <ul class="mb-1">
+                                        <li>Basics of AI & Automation</li>
+                                        <li>Chatbot building session using visual tools</li>
+                                    </ul>
+                                    <p class="mb-1"><strong>Impact:</strong></p>
+                                    <ul>
+                                        <li>Students created simple AI responses</li>
+                                        <li>Teachers observed increased curiosity and better engagement</li>
+                                        <li>Many students expressed interest in attending further courses</li>
+                                    </ul>
                                 </div>
-                                <br>
-                                <div>
-                                    📌 <strong>Case Study 3: Govt School, Karimnagar – Future Tech Awareness Drive</strong><br>
-                                    Mode: One-day pilot bootcamp<br>
-                                    Topics: AI in Daily Life, Robotics Demos, Ethical Hacking Intro<br>
-                                    <strong>Feedback:</strong><br>
-                                    High attendance despite minimal promotion<br>
-                                    School decided to initiate a tech club post-event<br>
-                                    Parents and teachers appreciated the exposure to emerging technologies
+                                
+                                <div class="mb-4">
+                                    <h5>📌 <strong>Case Study 3: Govt School, Karimnagar – Future Tech Awareness Drive</strong></h5>
+                                    <p class="mb-1"><strong>Mode:</strong> One-day pilot bootcamp</p>
+                                    <p class="mb-1"><strong>Topics:</strong> AI in Daily Life, Robotics Demos, Ethical Hacking Intro</p>
+                                    <p class="mb-1"><strong>Feedback:</strong></p>
+                                    <ul>
+                                        <li>High attendance despite minimal promotion</li>
+                                        <li>School decided to initiate a tech club post-event</li>
+                                        <li>Parents and teachers appreciated the exposure to emerging technologies</li>
+                                    </ul>
                                 </div>
+                                
+                                
                             </div>
 
-                            <div class="section " style="background-color: inherit; position: relative;">
+                            <div class="section" style="position: relative;">
                                 <div class="watermark">DRAFT</div>
                                 <h2>4. Draft MoU – Key Collaboration Terms</h2>
                                 <p>Here's a Draft Memorandum of Understanding (MoU) between Canies Academy and a school.
                                     This version is flexible and professional, perfect for initial collaboration
                                     agreements.</p>
-                                <div class="bg-light text-dark">
+                                <div class="bg-light p-4 rounded">
                                 <h3>MEMORANDUM OF UNDERSTANDING (MoU)</h3>
                                 <p>This MoU is made on [Date]</p>
                                 <p><strong>Between:</strong></p>
                                 <p>Canies Academy, represented by Mr. Shrikanteshwar Reddy (CEO), hereinafter referred to
                                     as the "Training Partner",</p>
                                 <p><strong>And</strong></p>
-                                <p>[School Name], represented by [Principal’s Name] (Principal), hereinafter referred to as
+                                <p>[School Name], represented by [Principal's Name] (Principal), hereinafter referred to as
                                     the "Institution".</p>
 
                                 <h4>1. Purpose of the MoU:</h4>
@@ -355,7 +499,7 @@
                                     <li>Provide venue, infrastructure (classrooms/projectors), and basic coordination
                                         support.</li>
                                     <li>Assist in promoting the program during summer camps and new admissions.</li>
-                                    <li>Allow the inclusion of Canies Academy’s branding on flyers, banners, and
+                                    <li>Allow the inclusion of Canies Academy's branding on flyers, banners, and
                                         promotional materials.</li>
                                     <li>Share the collaboration details in school circulars, websites, and social media.
                                     </li>
@@ -365,7 +509,7 @@
 
                                 <h4>4. Branding & Publicity Agreement:</h4>
                                 <ul>
-                                    <li>Canies Academy’s logo will be displayed in all relevant promotional material for
+                                    <li>Canies Academy's logo will be displayed in all relevant promotional material for
                                         the summer camps or academic year.</li>
                                     <li>Joint branding will be featured in hoardings, flyers, and digital campaigns run by
                                         the Institution.</li>
@@ -395,21 +539,23 @@
                                 <p>Date: __________________________</p>
 
                                 <p><strong>For [School Name]</strong></p>
-                                <p>Name: [Principal’s Name]</p>
+                                <p>Name: [Principal's Name]</p>
                                 <p>Designation: Principal</p>
                                 <p>Signature: ______________________</p>
                                 <p>Date: __________________________</p>
                                 </div>
+                                
+                                
                             </div>
 
-                            <div class="section" style="background-color: inherit;">
+                            <div class="section">
                                 <h2>Joint Marketing Plan for Canies Academy & [School Name]</h2>
                                 <h3>1. Objectives</h3>
                                 <h4>Increase Brand Visibility:</h4>
                                 <p>Enhance the public profile of both Canies Academy and [School Name] by positioning the collaboration as an
                                     innovative educational initiative.</p>
                                 <h4>Drive Student Engagement:</h4>
-                                <p>Attract prospective students to both the academy’s courses and the school’s summer/extracurricular programs through
+                                <p>Attract prospective students to both the academy's courses and the school's summer/extracurricular programs through
                                     targeted promotional activities.</p>
                                 <h4>Boost Admissions:</h4>
                                 <p>Leverage the partnership to showcase the forward-thinking programs that can lead to increased student enrollment
@@ -439,14 +585,14 @@
                                 <h4>A. Digital Marketing</h4>
                                 <h5>Website Integration:</h5>
                                 <ul>
-                                    <li>Add a dedicated section on [School Name]’s website that explains the partnership and showcases the benefits
+                                    <li>Add a dedicated section on [School Name]'s website that explains the partnership and showcases the benefits
                                         of the joint programs.</li>
                                     <li>Embed a link to the Canies Academy website (<a
                                             href="https://caniesacademy.vercel.app">https://caniesacademy.vercel.app</a>) and vice versa.</li>
                                 </ul>
                                 <h5>Social Media Campaigns:</h5>
                                 <ul>
-                                    <li>Cross-promote on both parties’ social media channels (Facebook, Instagram, Twitter, LinkedIn).</li>
+                                    <li>Cross-promote on both parties' social media channels (Facebook, Instagram, Twitter, LinkedIn).</li>
                                     <li>Use engaging visuals (e.g., infographics, posters) to highlight the hands-on training, expert mentorship,
                                         and project-based learning.</li>
                                     <li>Plan co-branded posts and video testimonials from students or teachers.</li>
@@ -468,7 +614,7 @@
                                 <h5>School Events & Workshops:</h5>
                                 <ul>
                                     <li>Organize joint events such as open houses, demonstration workshops, or introductory sessions during the
-                                        school’s summer camp.</li>
+                                        school's summer camp.</li>
                                     <li>Host a launch event with live demonstrations or project showcases to generate buzz.</li>
                                 </ul>
                                 <h5>Local Media & Press Releases:</h5>
@@ -560,13 +706,22 @@
                                 <h3>7. Review & Feedback</h3>
                                 <p>Both parties agree to:</p>
                                 <ul>
-                                    <li>Conduct bi-monthly reviews to assess the campaign’s performance.</li>
+                                    <li>Conduct bi-monthly reviews to assess the campaign's performance.</li>
                                     <li>Share insights, feedback, and make adjustments as needed.</li>
                                     <li>Continue open communication for troubleshooting or further collaborative opportunities.</li>
                                 </ul>
                                 <p>By executing this Joint Marketing Plan, Canies Academy and [School Name] will not only increase public
                                     engagement and strengthen their brand presence but also jointly foster an innovative, future-ready learning
                                     environment for students.</p>
+                                    
+                                <div class="contact-btn-group">
+                                    <a href="https://wa.me/+918331008860" class="whatsapp-btn">
+                                        <i class="bi bi-whatsapp"></i> Connect via WhatsApp
+                                    </a>
+                                    <a href="tel:+91739649780" class="call-btn">
+                                        <i class="bi bi-telephone"></i> Call Us Directly
+                                    </a>
+                                </div>
                             </div>
 
                         </div>
