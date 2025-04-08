@@ -129,8 +129,12 @@ h6 {
   }
 }
 /* In your assets/css/main.css */
+.light-background {
+    background-color: #f8f9fa; /* Example light background color */
+}
+
 .section {
-    background-color: transparent; /* Make the section background transparent */
+    background-color: #f8f9fa; /* Match the light background color */
 }
 /*--------------------------------------------------------------
 # Global Header
